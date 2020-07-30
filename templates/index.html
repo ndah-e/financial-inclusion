@@ -1,0 +1,69 @@
+{% extends 'base.html' %}
+
+{% block head%}
+
+{% endblock %}
+
+{% block body %}
+
+
+<div>
+    <h1>Financial Inclusion Predictor</h1>
+
+    <form action="/predict" method="POST">
+        <div>
+            <label for="location_type">Location type</label> 
+            <select id="location_type" name="location_type"> 
+                <option value="Rural">Rural</option> 
+                <option value="Urban">Urban</option> 
+            </select>
+        </div>
+        <br> 
+
+        <div>
+            <label for="cellphone_access">Cellphone access</label> 
+            <select id="cellphone_access" name="cellphone_access"> 
+                <option value="No">No</option> 
+                <option value="Yes">Yes</option> 
+            </select> 
+        </div>
+                
+        <div>
+            <label for="gender_of_respondent">gender of respondent</label> 
+            <select id="gender_of_respondent" name="gender_of_respondent"> 
+                <option value="Female">Female</option> 
+                <option value="Male">Male</option> 
+            </select> 
+        </div>
+
+        <div>
+            <label for="education_level">Education level</label> 
+            <select id="education_level" name="education_level"> 
+                <option value="Primary education">Primary education</option> 
+                <option value="Secondary education">Secondary education</option> 
+                <option value="No formal education">No formal education</option> 
+                <option value="Tertiary education">Tertiary education</option> 
+                <option value="Vocational/Specialised training">Vocational/Specialised training</option> 
+                <option value="Other/Dont know/RTA">Other/Don't know/RTA</option> 
+            </select> 
+        </div>
+
+        <div>
+            <label for="job_type">job_type</label> 
+            <select id="job_type" name="job_type"> 
+                <option value="Self employed">Self employed</option> 
+                <option value="Informally employed">Informally employed</option> 
+                <option value="Farming and Fishing">Farming and Fishing</option> 
+                <option value="Remittance Dependent">Remittance Dependent</option> 
+                <option value="Other Income">Other Income</option> 
+                <option value="Formally employed Private">Formally employed Private</option> 
+                <option value="Formally employed Government">Formally employed Government</option> 
+                <option value="Government Dependent">AGovernment Dependent</option> 
+                <option value="Dont Know/Refuse to answer">Don't Know/Refuse to answer</option> 
+            </select> 
+        </div>
+        <input type="submit" value="Submit"> 
+    </form>
+    <h2>Predicted: {{pred}}</h2>
+</div>
+{% endblock %}
