@@ -1,2 +1,18 @@
-*__pycache__/
-.vscode/
+# VS code files
+.DS_Store
+
+# ignore notebook check points
+.ipynb_checkpoints
+*/.ipynb_checkpoints
+notebook/.ipynb_checkpoints
+
+# pycache
+__pycache__
+*/__pycache__/*
+
+# test cache
+.pytest_cache
+*/.pytest_cache
+
+# Ignore dynaconf secret files
+.secrets.*
